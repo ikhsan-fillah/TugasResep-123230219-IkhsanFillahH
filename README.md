@@ -1,17 +1,44 @@
-# tugas_resep
+# ResepKu - Aplikasi Resep Masakan
 
-A new Flutter project.
+**Tugas Praktikum Mobile IF-E**
+- Nama : Ikhsan Fillah Hidayat
+- NIM  : 123230219
 
-## Getting Started
+Aplikasi resep masakan menggunakan Flutter + TheMealDB API.
 
-This project is a starting point for a Flutter application.
+## Struktur Project
+```
+lib/
+├── main.dart
+├── models/
+│   ├── meal_model.dart
+│   └── meal_model.g.dart
+└── screens/
+    ├── login_screen.dart
+    ├── register_screen.dart
+    ├── main_screen.dart
+    ├── home_screen.dart
+    ├── detail_screen.dart
+    └── favorite_screen.dart
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Setup & Jalankan
+```bash
+flutter pub get
+flutter run
+```
+> File `meal_model.g.dart` sudah disertakan, **tidak perlu** jalankan `build_runner`.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## API
+Base URL: `https://www.themealdb.com/api/json/v1/1/`
+- List resep: `/filter.php?c={kategori}`
+- Detail: `/lookup.php?i={id}`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Fitur
+- [x] Register & Login (SharedPreferences)
+- [x] Logout dari AppBar
+- [x] Home: GridView resep + filter kategori + loading indicator
+- [x] Detail: foto, nama, kategori, negara, bahan, cara masak
+- [x] Toggle favorit (tambah/hapus)
+- [x] Favorit disimpan di Hive (persisten)
+- [x] Favorite Page: grid + hapus item
