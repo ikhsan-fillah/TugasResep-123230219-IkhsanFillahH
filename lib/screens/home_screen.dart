@@ -90,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 label: Text(cat),
                 selected: selected,
                 selectedColor: const Color(0xFFFF9800),
+                checkmarkColor: Colors.white,
                 labelStyle: TextStyle(
                     color: selected ? Colors.white : const Color(0xFF424242),
                     fontSize: 13,
